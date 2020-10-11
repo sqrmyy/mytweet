@@ -48,6 +48,7 @@ func dbInit() {
 	// コネクション解放解放
 	defer db.Close()
 	db.AutoMigrate(&Tweet{}) //構造体に基づいてテーブルを作成
+	db.AutoMigrate(&User{})
 }
 
 // データインサート処理
